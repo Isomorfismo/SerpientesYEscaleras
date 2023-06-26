@@ -116,21 +116,21 @@ void moverJugador(List *list, int *posJugador, int numeroDado, char jugador) {
   }
   if (current != NULL) {
     if (current->type == 'S' || current->type == 'E') {
-      printf("El jugador %c cayó en la casilla %d y se movió a la casilla %d "
+      printf("El jugador %c cayo en la casilla %d y se movio a la casilla %d "
              "porque era %c\n",
              jugador, nuevaPosicion, current->prev->number, current->type);
       nuevaPosicion = current->prev->number;
     } else {
-      printf("El jugador %c cayó en la casilla %d\n", jugador, nuevaPosicion);
+      printf("El jugador %c cayo en la casilla %d\n", jugador, nuevaPosicion);
     }
   }
   changeNodeValue(list, *posJugador,
-                  ' '); // Eliminar el jugador de la posición actual
+                  ' '); // Eliminar el jugador de la posicion actual
   changeNodeValue(list, nuevaPosicion,
-                  jugador); // Colocar el jugador en la nueva posición
+                  jugador); // Colocar el jugador en la nueva posicion
 
-  *posJugador = nuevaPosicion; // Actualizar la posición del jugador
-  // Verificar si los jugadores están en la misma posición
+  *posJugador = nuevaPosicion; // Actualizar la posicion del jugador
+  // Verificar si los jugadores estan en la misma posicion
 }
 
 void printGrid(List *list, int posJugador1, int posJugador2) {
